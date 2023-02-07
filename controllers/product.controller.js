@@ -4,18 +4,17 @@ const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.title) {
+  if (!req.body.name) {
     res.status(400).send({
-      message: "Content can not be empty!",
+      message: "Content can not be emptyyyy!",
     });
     return;
   }
 
   // Create a Product
   const product = {
-    title: req.body.title,
-    description: req.body.description,
-    published: req.body.published ? req.body.published : false,
+    name: req.body.name,
+    desc: req.body.desc,
     amount: req.body.amount,
   };
 
